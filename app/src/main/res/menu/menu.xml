@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/arduino"
+        android:title="Hospital"
+        android:icon="@drawable/ic_local_hospital_black_24dp"
+        />
+
+    <item
+        android:id="@+id/projects2"
+        android:title="Map"
+        android:icon="@drawable/ic_map_black_24dp"
+        />
+
+    <item
+        android:id="@+id/bluetooth"
+        android:title="Alarm"
+        android:icon="@drawable/ic_sms_black_24dp"
+        />
+</menu>

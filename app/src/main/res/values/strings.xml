@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Medical App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Map_box_map">pk.eyJ1Ijoic2FyaW1rODAiLCJhIjoiY2p0cXphMmt0MDNsdzQzcDJ5d2I3YWxnbyJ9.9fZQSyOz8btDQ_J_yAhJ6g</string>
+</resources>

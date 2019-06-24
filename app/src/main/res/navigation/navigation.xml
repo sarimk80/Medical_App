@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/arduino">
+
+    <fragment
+        android:id="@+id/arduino"
+        android:name="com.example.medicalapp.hospital.Hospital_fragment"
+        android:label="fragment_hospital_fragment"
+        tools:layout="@layout/fragment_hospital_fragment" >
+        <action
+            android:id="@+id/action_hospital_fragment_to_map_fragment"
+            app:destination="@id/projects2" />
+        <action
+            android:id="@+id/action_hospital_fragment_to_alarm_fragment"
+            app:destination="@id/bluetooth" />
+    </fragment>
+    <fragment
+        android:id="@+id/projects2"
+        android:name="com.example.medicalapp.map.Map_fragment"
+        android:label="fragment_map_fragment"
+        tools:layout="@layout/fragment_map_fragment" />
+    <fragment
+        android:id="@+id/bluetooth"
+        android:name="com.example.medicalapp.alarm.Alarm_fragment"
+        android:label="fragment_alarm_fragment"
+        tools:layout="@layout/fragment_alarm_fragment" />
+</navigation>
