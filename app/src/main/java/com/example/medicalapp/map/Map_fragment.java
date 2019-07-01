@@ -26,6 +26,8 @@ import com.mapbox.geojson.Point;
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.annotations.Marker;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
+import com.mapbox.mapboxsdk.camera.CameraPosition;
+import com.mapbox.mapboxsdk.camera.CameraUpdate;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.location.LocationComponent;
 import com.mapbox.mapboxsdk.location.modes.CameraMode;
@@ -120,7 +122,7 @@ public class Map_fragment extends Fragment implements
             }
 
             @Override
-            public void onSuccess(Hospitals_location hospitals_location) {
+            public void onSuccess(final Hospitals_location hospitals_location) {
 
 
                 Log.d(TAG, "onSuccess: " + hospitals_location.getResponse().getVenues()
@@ -134,6 +136,7 @@ public class Map_fragment extends Fragment implements
                     mapboxMap.addMarker(new MarkerOptions().
                             position(new LatLng(_getlat.get(i), _getlon.get(i)))
                             .title(_getTitle.get(i)));
+
                 }
                 progressDialog.dismiss();
             }
@@ -178,8 +181,9 @@ public class Map_fragment extends Fragment implements
 //
 //        }
 
-
-        mapboxMap.setStyle(new Style.Builder().fromUrl("mapbox://styles/mapbox/cjerxnqt3cgvp2rmyuxbeqme7"),
+//        mapboxMap.setStyle(Style.LIGHT);
+//
+        mapboxMap.setStyle(Style.LIGHT,
                 new Style.OnStyleLoaded() {
                     @Override
                     public void onStyleLoaded(@NonNull Style style) {
@@ -219,8 +223,15 @@ public class Map_fragment extends Fragment implements
             locationComponent.setCameraMode(CameraMode.TRACKING);
 
 // Set the component's render mode
-            locationComponent.setRenderMode(RenderMode.COMPASS);
+            locationComponent.setRenderMode(RenderMode.NORMAL);
+
+
         } else {
+            mapboxMap.setCameraPosition(new CameraPosition
+                    .Builder()
+                    .target(new LatLng(24.850091, 67.029736))
+                    .zoom(8)
+                    .build());
             permissionsManager = new PermissionsManager(this);
             permissionsManager.requestLocationPermissions(getActivity());
         }
@@ -249,6 +260,13 @@ public class Map_fragment extends Fragment implements
             Toast.makeText(getContext(), "Not Granted Permission", Toast.LENGTH_LONG).show();
 
         }
+    }
+
+    @Override
+    @SuppressWarnings({"MissingPermission"})
+    public void onStart() {
+        super.onStart();
+        mapView.onStart();
     }
 
     @Override

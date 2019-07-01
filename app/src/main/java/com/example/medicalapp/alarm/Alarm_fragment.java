@@ -14,12 +14,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.example.medicalapp.R;
+import com.example.medicalapp.login.LoginActivity;
+import com.example.medicalapp.main.MainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -41,6 +44,7 @@ public class Alarm_fragment extends Fragment {
 //    private Switch aSwitch;
 //    Calendar calendar = null;
     TextView name, email, phone;
+    Button btn_logout;
 
 
     public Alarm_fragment() {
@@ -61,6 +65,7 @@ public class Alarm_fragment extends Fragment {
         name = view.findViewById(R.id.name);
         email = view.findViewById(R.id.email);
         phone = view.findViewById(R.id.phone);
+        btn_logout = view.findViewById(R.id.btn_logout);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -71,6 +76,16 @@ public class Alarm_fragment extends Fragment {
         } else {
 
         }
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+
+            }
+        });
 
 
 //        alarmTimePicker = view.findViewById(R.id.Alarm);

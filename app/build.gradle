@@ -6,6 +6,7 @@ android {
         applicationId "com.example.medicalapp"
         minSdkVersion 19
         targetSdkVersion 28
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -68,6 +69,12 @@ dependencies {
     //FireBasr_auth
     implementation 'com.google.firebase:firebase-auth:18.0.0'
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+    //FireBae_ui
+    implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
+
+    //MultiDex
+    implementation 'com.android.support:multidex:1.0.3'
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retro"

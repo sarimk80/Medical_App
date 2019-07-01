@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         // [START config_signin]
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestIdToken("179677816015-ku4j7e7iljao0ofu4sq86fdcnb8mkgnj.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
         // [END config_signin]
@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
                 Log.w(TAG, "Google sign in failed", e);
-                Snackbar.make(findViewById(R.id.login),"Login Failed",Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(R.id.login), "Login Failed", Snackbar.LENGTH_SHORT).show();
                 // [START_EXCLUDE]
                 updateUI(null);
                 // [END_EXCLUDE]
