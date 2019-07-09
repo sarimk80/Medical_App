@@ -1,50 +1,30 @@
 package com.example.medicalapp.alarm;
 
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Intent;
-import android.os.Build;
+
 import android.os.Bundle;
 
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import com.example.medicalapp.R;
 import com.example.medicalapp.login.LoginActivity;
-import com.example.medicalapp.main.MainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import java.util.Calendar;
-
-import static android.content.Context.ALARM_SERVICE;
-
-
 /**
  * A simple {@link Fragment} subclass.
  */
 public class Alarm_fragment extends Fragment {
 
-    //    AlarmManager alarmManager;
-//    private PendingIntent pendingIntent;
-//    private TimePicker alarmTimePicker;
-//    private static Alarm_fragment inst;
-//    private TextView alarmTextView;
-//    private Switch aSwitch;
-//    Calendar calendar = null;
-    TextView name, email, phone;
-    Button btn_logout;
+
+   private TextView name, email, phone;
+   private Button btn_logout;
 
 
     public Alarm_fragment() {
@@ -88,38 +68,10 @@ public class Alarm_fragment extends Fragment {
         });
 
 
-//        alarmTimePicker = view.findViewById(R.id.Alarm);
-//        alarmTextView = view.findViewById(R.id.alert);
-//        aSwitch = view.findViewById(R.id.toggle);
-//
-//        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @RequiresApi(api = Build.VERSION_CODES.M)
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if (isChecked) {
-//                    Log.d("Main", "Alarm on");
-//                    Intent myIntent = new Intent(getContext(), AlarmReceiver.class);
-//                    pendingIntent = PendingIntent.getBroadcast(getContext(), 1, myIntent, 0);
-//                    calendar = Calendar.getInstance();
-//                    calendar.set(Calendar.HOUR_OF_DAY, alarmTimePicker.getHour());
-//                    calendar.set(Calendar.MINUTE, alarmTimePicker.getMinute());
-//                    alarmManager = (AlarmManager) getActivity().getSystemService(ALARM_SERVICE);
-//                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),10000, pendingIntent);
-//
-//                } else {
-//                    alarmManager.cancel(pendingIntent);
-//                    alarmTextView.setText("");
-//                    Log.d("MyActivity", "Alarm Off");
-//
-//                }
-//            }
-//        });
+
 
         return view;
     }
 
-//    public void setAlarmText(String alarmText) {
-//        alarmTextView.setText(alarmText);
-//    }
 
 }
