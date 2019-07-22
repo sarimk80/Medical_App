@@ -3,6 +3,7 @@ package com.example.medicalapp.map;
 
 import android.app.ProgressDialog;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Icon;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -53,6 +54,12 @@ import io.reactivex.schedulers.Schedulers;
 public class Map_fragment extends Fragment implements
         OnMapReadyCallback, PermissionsListener {
 
+    /**
+     * THIS FRAGMENT DISPLAYS THE MAP WHICH IS FROM THE MAP BOX MAP API
+     * THIS FRAGMENT WILL ALSO MAKE A NETWORK CALL AND WILL DISPLAY THE LIST OF -
+     * - ALL THE HOSPITALS IN NEARBY AREA
+     * USER CAN ALSO TAP ON A PARTICULAR HOSPITAL AND CAN MAKE A CALL TO THAT HOSPITAL
+     */
 
     private PermissionsManager permissionsManager;
     private MapboxMap mapboxMap;
@@ -104,6 +111,7 @@ public class Map_fragment extends Fragment implements
         final List<Double> _getlat = new ArrayList<>();
         final List<Double> _getlon = new ArrayList<>();
         final List<String> _getTitle = new ArrayList<>();
+        final List<String> _getSnippit = new ArrayList<>();
 
         Map_fragment.this.mapboxMap = mapboxMap;
 
@@ -133,9 +141,10 @@ public class Map_fragment extends Fragment implements
                     _getlon.add(hospitals_location.getResponse().getVenues().get(i).getLocation()
                             .getLng());
                     _getTitle.add(hospitals_location.getResponse().getVenues().get(i).getName());
+                    _getSnippit.add(hospitals_location.getResponse().getVenues().get(i).getLocation().getAddress());
                     mapboxMap.addMarker(new MarkerOptions().
                             position(new LatLng(_getlat.get(i), _getlon.get(i)))
-                            .title(_getTitle.get(i)));
+                            .title(_getTitle.get(i)).snippet(_getSnippit.get(i)));
 
                 }
                 progressDialog.dismiss();

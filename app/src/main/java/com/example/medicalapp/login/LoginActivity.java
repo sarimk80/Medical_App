@@ -7,8 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.medicalapp.R;
 import com.example.medicalapp.main.MainActivity;
@@ -28,6 +26,13 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
+    /**
+     * THIS ACTIVITY IS RESPONSIBLE FOR USER LOGIN
+     * USER CAN LOGIN WITH THEIR GOOGLE ID
+     */
+
+
+
     private static final String TAG = "GoogleActivity";
     private static final int RC_SIGN_IN = 9001;
 
@@ -68,6 +73,10 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * It will check when the activity start weather the user in login or not
+     * if it is login it will update the ui otherwise the ui will be the same
+     */
     @Override
     protected void onStart() {
         super.onStart();

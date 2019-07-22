@@ -6,6 +6,9 @@ import io.reactivex.Single;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
+/**
+ * This interface is responsible for call the api service
+ */
 public interface APIService {
     @GET("search")
     Single<Hospitals_location> getLocation(

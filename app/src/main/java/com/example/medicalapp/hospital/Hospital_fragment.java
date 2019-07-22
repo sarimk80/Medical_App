@@ -24,12 +24,25 @@ import com.example.medicalapp.databinding.FragmentHospitalFragmentBinding;
  */
 public class Hospital_fragment extends Fragment {
 
+    /**
+     * THIS IS THE FIRST FRAGMENT THE USER SEE WHEN HE/SHE LOGIN
+     * THIS FRAGMENT DISPLAY THE LIST OF HOSPITALS OR AMBULANCES THAT THE USER AND CALL
+     */
+
+
      private FragmentHospitalFragmentBinding fragmentHospitalFragmentBinding;
 
     public Hospital_fragment() {
         // Required empty public constructor
     }
 
+    /**
+     * OnCreateView will bind the layout with out fragment
+     * @param inflater the layout with fragment
+     * @param container
+     * @param savedInstanceState
+     * @return the view
+     */
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -46,6 +59,13 @@ public class Hospital_fragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        /*
+         * Created an interface with the name od event_hospital which
+         * contains all the click event for this fragment
+         * and those void methods are then connected to the layout
+         * and when the user click on those card view it triggers these
+         * events
+         */
         fragmentHospitalFragmentBinding.setEvent(new Events_hospital() {
             @Override
             public void Edhi() {
