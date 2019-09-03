@@ -6,7 +6,7 @@
 
         <variable
             name="Event"
-            type="com.example.medicalapp.hospital.Events_hospital" />
+            type="com.medical.medicalapp.hospital.Events_hospital" />
     </data>
 
     <ScrollView
@@ -186,6 +186,282 @@
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
+
+            <LinearLayout style="@style/LinearLayout">
+
+                <androidx.cardview.widget.CardView style="@style/CardView.">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text"
+                            android:text="Cancer Foundation"
+
+                            />
+
+                        <ImageView
+                            style="@style/ImageView"
+                            android:background="@drawable/ic_hospital" />
+
+                        <Button
+                            style="@style/Button"
+                            android:onClick="@{(v)->Event.CancerFoundation()}" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView style="@style/CardView."
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text"
+                            android:text="Rab Medical Hospital"
+
+                            />
+
+
+                        <ImageView
+                            style="@style/ImageView"
+                            android:background="@drawable/ic_hospital" />
+
+                        <Button
+                            style="@style/Button"
+                            android:onClick="@{(v)->Event.RabMedical()}" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/LinearLayout">
+
+                <androidx.cardview.widget.CardView style="@style/CardView.">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text"
+                            android:text="Ashfaq Memorial Hospital"
+
+                            />
+
+                        <ImageView
+                            style="@style/ImageView"
+                            android:background="@drawable/ic_hospital" />
+
+                        <Button
+                            style="@style/Button"
+                            android:onClick="@{(v)->Event.Ashfaq_Memorial()}" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView style="@style/CardView."
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text"
+                            android:text="Al Mustafa Hospital"
+
+                            />
+
+
+                        <ImageView
+                            style="@style/ImageView"
+                            android:background="@drawable/ic_hospital" />
+
+                        <Button
+                            style="@style/Button"
+                            android:onClick="@{(v)->Event.Al_Mustafa()}" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/LinearLayout">
+
+                <androidx.cardview.widget.CardView style="@style/CardView.">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text"
+                            android:text="Aga_Khan Hospital"
+
+                            />
+
+                        <ImageView
+                            style="@style/ImageView"
+                            android:background="@drawable/ic_hospital" />
+
+                        <Button
+                            style="@style/Button"
+                            android:onClick="@{(v)->Event.Aga_Khan()}" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView style="@style/CardView."
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text"
+                            android:text="Liaquat_National Hospital"
+
+                            />
+
+
+                        <ImageView
+                            style="@style/ImageView"
+                            android:background="@drawable/ic_hospital" />
+
+                        <Button
+                            style="@style/Button"
+                            android:onClick="@{(v)->Event.Liaquat_National()}" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/LinearLayout">
+
+                <androidx.cardview.widget.CardView style="@style/CardView.">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text"
+                            android:text="Ahmed_Ibrahim Hospital"
+
+                            />
+
+                        <ImageView
+                            style="@style/ImageView"
+                            android:background="@drawable/ic_hospital" />
+
+                        <Button
+                            style="@style/Button"
+                            android:onClick="@{(v)->Event.Ahmed_Ibrahim()}" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView style="@style/CardView."
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text"
+                            android:text="Shifa Sugar Clinic"
+
+                            />
+
+
+                        <ImageView
+                            style="@style/ImageView"
+                            android:background="@drawable/ic_hospital" />
+
+                        <Button
+                            style="@style/Button"
+                            android:onClick="@{(v)->Event.Shifa_Sugar_Clinic()}" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/LinearLayout">
+
+                <androidx.cardview.widget.CardView style="@style/CardView.">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text"
+                            android:text="National Health"
+
+                            />
+
+                        <ImageView
+                            style="@style/ImageView"
+                            android:background="@drawable/ic_hospital" />
+
+                        <Button
+                            style="@style/Button"
+                            android:onClick="@{(v)->Event.National_Health()}" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView style="@style/CardView."
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text"
+                            android:text="Darul Sehat"
+
+                            />
+
+
+                        <ImageView
+                            style="@style/ImageView"
+                            android:background="@drawable/ic_hospital" />
+
+                        <Button
+                            style="@style/Button"
+                            android:onClick="@{(v)->Event.Darul_Sehat()}" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:layout_width="match_parent"
     >
 
+
     <LinearLayout
-        android:id="@+id/login"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        tools:context=".signup.Signup"
         android:orientation="vertical"
-        tools:context=".login.LoginActivity">
-
+        android:gravity="center"
+        >
 
         <ImageView
             android:layout_width="@dimen/_100sdp"
@@ -22,43 +22,49 @@
             android:background="@drawable/ic_032_doctor" />
 
         <EditText
-            android:id="@+id/Edt_email"
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_20sdp"
             android:hint="Enter Email Address"
-            android:inputType="textEmailAddress"
-            />
+            android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/Edt_password"
+            android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_20sdp"
             android:hint="Enter Password"
-            android:inputType="textPassword"
-            />
+            android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/edtPassword2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:hint="Enter Password Again"
+            android:inputType="textPassword" />
 
 
 
         <Button
-            android:id="@+id/btn_signin"
+            android:id="@+id/btnSignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_20sdp"
             android:background="@color/colorAccent"
             android:padding="@dimen/_10sdp"
-            android:text="Sign In"
+            android:text="Sign Up"
             android:textColor="@android:color/white"
             android:textSize="@dimen/_15sdp" />
 
         <TextView
-            android:id="@+id/btn_signup"
+            android:id="@+id/btnSignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_20sdp"
-            android:text="Sign Up"
+            android:text="Sign In"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/_20sdp" />
+
     </LinearLayout>
 </ScrollView>

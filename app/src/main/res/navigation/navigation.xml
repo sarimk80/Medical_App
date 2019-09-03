@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/arduino"
-        android:name="com.example.medicalapp.hospital.Hospital_fragment"
+        android:name="com.medical.medicalapp.hospital.Hospital_fragment"
         android:label="fragment_hospital_fragment"
         tools:layout="@layout/fragment_hospital_fragment" >
         <action
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/projects2"
-        android:name="com.example.medicalapp.map.Map_fragment"
+        android:name="com.medical.medicalapp.map.Map_fragment"
         android:label="fragment_map_fragment"
         tools:layout="@layout/fragment_map_fragment" />
     <fragment
         android:id="@+id/bluetooth"
-        android:name="com.example.medicalapp.alarm.Alarm_fragment"
+        android:name="com.medical.medicalapp.alarm.Alarm_fragment"
         android:label="fragment_alarm_fragment"
         tools:layout="@layout/fragment_alarm_fragment" />
 </navigation>
