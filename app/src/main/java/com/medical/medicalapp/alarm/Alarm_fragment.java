@@ -99,7 +99,7 @@ public class Alarm_fragment extends Fragment {
             email.setText(user.getEmail());
             phone.setText(user.getPhoneNumber());
         } else {
-
+            Log.d("Main", "Error");
         }
         btn_logout.setOnClickListener(view1 -> {
             FirebaseAuth.getInstance().signOut();
@@ -166,7 +166,7 @@ public class Alarm_fragment extends Fragment {
     }
 
 
-   private void Send_SMS(String user_location, String phone_no) {
+    private void Send_SMS(String user_location, String phone_no) {
 
         try {
             /*
